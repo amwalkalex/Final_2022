@@ -55,8 +55,7 @@ table1 <- xtabs(~infected + treatment, data=males)
 rowPerc(table1)
 colPerc(table1)
 ```
-
-These numerical results show specific percentages of males that got covid-19 after taking the placebo and taking the vaccine. 2.55 males were given the placebo and were infected, and 97.45 were not infected. This shows that many more people who were given the placebo were not infected as supposed to those who were infected. As far as the males that were given the vaccine, 1.15 were infected and 98.85 were not infected. This shows that there was a large number of males that were not infected after receiving the vaccine as supposed to those who did not. Based on this it seems that it was a much larger amount of males not being infected whether they took the vaccine or not. 
+The table provided shows that 2.5% of people who received it got infected, and 97.5% did not get infected.For the vaccine treatment, 1.1% of people who received it got infected, and 98.8% did not get infected. These numerical results show specific percentages of males that got covid-19 after taking the placebo and taking the vaccine. 2.55 males were given the placebo and were infected, and 97.45 were not infected. This shows that many more people who were given the placebo were not infected as supposed to those who were infected. As far as the males that were given the vaccine, 1.15 were infected and 98.85 were not infected. This shows that there was a large number of males that were not infected after receiving the vaccine as supposed to those who did not. Based on this it seems that it was a much larger amount of males not being infected whether they took the vaccine or not. 
 
 ### Inferential 
 
@@ -102,12 +101,25 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 There are two different plots based on females and their results of getting infected or not based on them taking the placebo or vaccine. The first plot will show side-by-side bars where the height of each bar represents the count of observations for each combination of infected and treatment. So it seems as though, there were very few females that received the placebo and vaccine that were infected and just a small percentage more were infected that received a placebo that a vaccine. The same amount of females were not infected that received the vaccine and the placebo. The second plot will show side-by-side bars where the height of each bar represents the percentage of observations for each combination of infected and treatment.So it seems that many more females that were infected was given the placebo as supposed to the vaccine. However, the amount of females that were not infected was about the same amount of females that received the placebo and the vaccine. 
 
+### Numerical results
+
 ```{r}
 table1 <- xtabs(~infected + treatment, data=females)
 rowPerc(table1)
 colPerc(table1)
 ``` 
-The table provides shows that 60% of individuals infected with "covid19" received the placebo treatment, while 40% received the vaccine" treatment, and 50% of individuals classified as non infected received the "placebo" treatment, and 50% received the vaccine treatment.These numerical results show specific percentages of females that got covid-19 after taking the placebo and taking the vaccine. 2.0 females were given the placebo and were infected, and 98 were not infected.This shows that many more females who were given the placebo were not infected as supposed to those who were infected. As far as the females that were given the vaccine, 1.4 were infected and 98.6 were not infected. This shows that there was a large number of females that were not infected after receiving the vaccine as supposed to those who did not. Based on this it seems that it was a much larger amount of males not being infected whether they took the vaccine or not. 
+The table provided shows that 60% of individuals infected with "covid19" received the placebo treatment, while 40% received the vaccine" treatment, and 50% of individuals classified as non infected received the "placebo" treatment, and 50% received the vaccine treatment.These numerical results show specific percentages of females that got covid-19 after taking the placebo and taking the vaccine. 2.0 females were given the placebo and were infected, and 98 were not infected.This shows that many more females who were given the placebo were not infected as supposed to those who were infected. As far as the females that were given the vaccine, 1.4 were infected and 98.6 were not infected. This shows that there was a large number of females that were not infected after receiving the vaccine as supposed to those who did not. Based on this it seems that it was a much larger amount of males not being infected whether they took the vaccine or not. 
+
+### Inferential 
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+galsfish <- fisher.test(table1)
+galsfish
+```
+
 
 ## LGBTQ
 
