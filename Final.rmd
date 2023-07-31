@@ -57,6 +57,18 @@ colPerc(table1)
 
 These numerical results show specific percentages of males that got covid-19 after taking the placebo and taking the vaccine. 2.55 males were given the placebo and were infected, and 97.45 were not infected. This shows that many more people who were given the placebo were not infected as supposed to those who were infected. As far as the males that were given the vaccine, 1.15 were infected and 98.85 were not infected. This shows that there was a large number of males that were not infected after receiving the vaccine as supposed to those who did not. Based on this it seems that it was a much larger amount of males not being infected whether they took the vaccine or not. 
 
+### Inferential 
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+guysfish <- fisher.test(table1)
+guysfish
+```
+
+
+
 
 ## Females
 
