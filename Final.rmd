@@ -32,13 +32,13 @@ A new  preventative vaccine (covid921) is under test in clinical trials. Given t
 
 #methods
 
-First, the variables from FinalData needed to be changed from character variables into factor variables. 
-Next, specific subgroups had to be separated from the broader categories in order to properly studied. Gal and guy were separated into subgroups, as well as gay sexual orientation and people that answered yes to participating in drug use. All of these categories are isolated to see weather or not these particular populations should  or should not take the  new covid-19 vaccine.
+The variables from FinalData needed to be changed from character variables into factor variables. 
+Specific subgroups had to be separated from the broader categories in order to properly studied. Female, male, Druggies, and LGBTQ were all separated into subgroups. All of these categories are isolated to see weather or not these particular populations got sick and who did not from taking the placebo.
 
 ## Males
 
 ```{r}
-dd2 <- guy %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+dd2 <- Males %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 
 
 # the group_by followed by summarize(count=n())
