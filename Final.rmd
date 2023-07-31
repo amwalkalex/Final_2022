@@ -63,22 +63,23 @@ The table provided shows that 2.5% of people who received it got infected, and 9
 ```{r}
 chisq.test(table1)
 chisqtestGC(table1)
-guysfish <- fisher.test(table1)
-guysfish
+malesfish <- fisher.test(table1)
+malesfish
 ```
 Based on the results, both Pearson's Chi-squared test and Fisher's Exact Test indicate a significant association between the infected and treatment variables. The odds ratio indicates that the odds of being infected with covid19 are higher for individuals receiving the vaccine treatment compared to the placebo treatment, and this difference is statistically significant.
 
 ```{r}
-effect <- guysfish$p.value/(guysfish$p.value +1)
-effectivenessguy = guysfish$estimate/(guysfish$estimate +1)*100
-print(effectivenessguy)
+effect <- malesfish$p.value/(malesfish$p.value +1)
+effectivenessmale = malesfish$estimate/(malesfish$estimate +1)*100
+print(effectivenessmale)
 ```
 
 ```{r}
-low=(guysfish$conf.int[1]/(guysfish$conf.int[1] +1))*100
-hi=(guysfish$conf.int[2]/(guysfish$conf.int[2] +1))*100
+low=(malesfish$conf.int[1]/(malesfish$conf.int[1] +1))*100
+hi=(malesfish$conf.int[2]/(malesfish$conf.int[2] +1))*100
 options(digits=2)
 ```
+
 
 ## Effectiveness Confidence Interval 
 
@@ -117,23 +118,27 @@ The table provided shows that 60% of individuals infected with "covid19" receive
 ```{r}
 chisq.test(table1)
 chisqtestGC(table1)
-galsfish <- fisher.test(table1)
-galsfish
+femalesfish <- fisher.test(table1)
+femalesfish
 ```
 Since the p-value (3e-04) is less than the conventional significance level of .05, we can reject the null hypothesis and conclude that there is a significant association between the infection status and the treatment.
 
-
 ```{r}
-effect <- galsfish$p.value/(galsfish$p.value +1)
-effectivenessgal = galsfish$estimate/(galsfish$estimate +1)*100
-print(effectivenessgal)
+effect <- femalesfish$p.value/(femalesfish$p.value +1)
+effectivenessfemale = femalesfish$estimate/(femalesfish$estimate +1)*100
+print(effectivenessfemale)
 ```
 
 ```{r}
-low=(galsfish$conf.int[1]/(galsfish$conf.int[1] +1))*100
-hi=(galsfish$conf.int[2]/(galsfish$conf.int[2] +1))*100
+low=(femalesfish$conf.int[1]/(femalesfish$conf.int[1] +1))*100
+hi=(femalesfish$conf.int[2]/(femalesfish$conf.int[2] +1))*100
 options(digits=2)
 ```
+
+
+## Effectiveness Confidence Interval 
+
+
 
 
 ## LGBTQ
