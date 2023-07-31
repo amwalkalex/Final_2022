@@ -120,6 +120,20 @@ chisqtestGC(table1)
 galsfish <- fisher.test(table1)
 galsfish
 ```
+Since the p-value (3e-04) is less than the conventional significance level of .05, we can reject the null hypothesis and conclude that there is a significant association between the infection status and the treatment.
+
+
+```{r}
+effect <- galsfish$p.value/(galsfish$p.value +1)
+effectivenessgal = galsfish$estimate/(galsfish$estimate +1)*100
+print(effectivenessgal)
+```
+
+```{r}
+low=(galsfish$conf.int[1]/(galsfish$conf.int[1] +1))*100
+hi=(galsfish$conf.int[2]/(galsfish$conf.int[2] +1))*100
+options(digits=2)
+```
 
 
 ## LGBTQ
