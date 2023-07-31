@@ -45,7 +45,8 @@ basicC + geom_bar(stat="identity",position="dodge")
 basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
-There are two different plots based on males and their results of getting infected or not based on them taking the placebo or vaccine. The first plot will show side-by-side bars where the height of each bar represents the count of observations for each combination of infected and treatment. The second plot will show side-by-side bars where the height of each bar represents the percentage of observations for each combination of infected and treatment.It seems as though roughly about the same amount of people were given the placebo and given the vaccine. However, many more people were non-infected as suppose to the much smaller amount of people that was. 
+There are two different plots based on males and their results of getting infected or not based on them taking the placebo or vaccine. The first plot will show side-by-side bars where the height of each bar represents the count of observations for each combination of infected and treatment. So it seems as though, there were very few males that received the placebo and vaccine that were infected and just a small percentage more were infected that received a placebo that a vaccine. In addition, a slightly more amount of males were not infected that received the vaccine and the placebo. The second plot will show side-by-side bars where the height of each bar represents the percentage of observations for each combination of infected and treatment. So it seems that more males were drastically infected and that was given the placebo over the vaccine. Whereas, the a slightly more amount of males that was given the placebo over the vaccine were not infected. 
+ 
 
 ### Numerical results
 
