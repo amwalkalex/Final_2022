@@ -83,7 +83,7 @@ options(digits=2)
 
 ## Effectiveness Confidence Interval 
 
-Above is the effectiveness for the covid-19 vaccine for males. Based on the interval seen above,the odds ratio for the  males are 69. The odds ratio is approximately how effective the vaccine is. We can conclude that the vaccine is effective in protecting guys from getting covid-19. 
+Above is the effectiveness for the covid-19 vaccine for males. Based on the interval seen above,the odds ratio for the  males are 69. The odds ratio is approximately how effective the vaccine is. We can conclude that the vaccine is effective in protecting males from getting covid-19. 
 
 ## Females
 
@@ -135,10 +135,9 @@ hi=(femalesfish$conf.int[2]/(femalesfish$conf.int[2] +1))*100
 options(digits=2)
 ```
 
-
 ## Effectiveness Confidence Interval 
 
-
+Above is the effectiveness for the covid-19 vaccine for females. Based on the interval seen above,the odds ratio for the  females are 60. The odds ratio is approximately how effective the vaccine is. We can conclude that the vaccine is effective in protecting females from getting covid-19
 
 
 ## LGBTQ
