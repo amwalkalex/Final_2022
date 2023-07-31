@@ -66,7 +66,7 @@ chisqtestGC(table1)
 guysfish <- fisher.test(table1)
 guysfish
 ```
-
+Based on the results, both Pearson's Chi-squared test and Fisher's Exact Test indicate a significant association between the infected and treatment variables. The odds ratio indicates that the odds of being infected with covid19 are higher for individuals receiving the vaccine treatment compared to the placebo treatment, and this difference is statistically significant.
 
 
 
