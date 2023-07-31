@@ -80,6 +80,7 @@ hi=(guysfish$conf.int[2]/(guysfish$conf.int[2] +1))*100
 options(digits=2)
 ```
 
+## Effectiveness Confidence Interval 
 
 Above is the effectiveness for the covid-19 vaccine for males. Based on the interval seen above,the odds ratio for the  males are 69. The odds ratio is approximately how effective the vaccine is. We can conclude that the vaccine is effective in protecting guys from getting covid-19. 
 
