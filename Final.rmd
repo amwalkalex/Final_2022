@@ -162,6 +162,20 @@ colPerc(table1)
 For the LGBTQ people infected, there were 15 who received the placebo and 85 were received the vaccine.
 Whereas there was 50 who received the placebo and 50 who received the  were vaccine who were not infected.
 
+### Inferential 
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+malesfish <- fisher.test(table1)
+malesfish
+```
+
+
+
+
+
 ## Druggies
 
 # Overall Results and Conclusions
