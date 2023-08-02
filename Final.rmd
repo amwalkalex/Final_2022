@@ -139,8 +139,19 @@ options(digits=2)
 
 Above is the effectiveness for the covid-19 vaccine for females. Based on the interval seen above,the odds ratio for the  females are 60. The odds ratio is approximately how effective the vaccine is. We can conclude that the vaccine is effective in protecting females from getting covid-19
 
-
 ## LGBTQ
+
+```{r}
+dd2 <- LGBTQ %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+basicC <- ggplot(dd2,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+
+basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
+
+
 
 ## Druggies
 
