@@ -221,4 +221,15 @@ colPerc(table1)
 These numerical results show specific percentages of Druggies that got covid-19 after taking the placebo and taking the vaccine. Based on the results, those Infected with the Placebo were 70 and had an infection rate of 2.5%., and those with the Vaccine were 30 with an infection rate of 1.1%.
 
 
+### Inferential 
+
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+drugfish <- fisher.test(table1)
+drugfish
+```
+
+
 # Overall Results and Conclusions
