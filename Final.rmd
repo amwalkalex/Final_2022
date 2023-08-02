@@ -227,9 +227,10 @@ These numerical results show specific percentages of Druggies that got covid-19 
 ```{r}
 chisq.test(table1)
 chisqtestGC(table1)
-drugfish <- fisher.test(table1)
-drugfish
+Druggiesfish <- fisher.test(table1)
+Druggiesfish
 ```
+According to the results, both the Chi-squared test and Fisher's Exact Test show strong evidence of a significant association between the treatment type and infection rates. The p-values from both tests are very close to 0, indicating that the differences in infection rates are highly unlikely to have occurred by chance. The odds ratio from Fisher's Exact Test suggests that the odds of infection are significantly lower for the vaccine treatment compared to the placebo treatment.
 
 
 # Overall Results and Conclusions
