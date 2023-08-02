@@ -150,7 +150,7 @@ basicC + geom_bar(stat="identity",position="dodge")
 basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
-There are two different plots based on LGBTQ and their results of getting infected or not based on them taking the placebo or vaccine. The first plot will show side-by-side bars where the height of each bar represents the count of observations for each combination of infected and treatment. So it seems as though, there were very few LGBTQ that received the placebo and vaccine but more received the vaccine than the placebo. Also, that were a slightly larger percentage more infected that received a vaccine rather than the placebo. In addition, the same amount of LGBTQ were not infected that received the vaccine and the placebo. The second plot will show side-by-side bars where the height of each bar represents the percentage of observations for each combination of infected and treatment.There ws a substantial amount of LGBTQ who received the vaccine than those who received the placebo and were infected. In addition, the same amount of LGBTQ were not infected that received the vaccine and the placebo.
+There are two different plots based on LGBTQ and their results of getting infected or not based on them taking the placebo or vaccine. The first plot will show side-by-side bars where the height of each bar represents the count of observations for each combination of infected and treatment. So it seems as though, there were very few LGBTQ that received the placebo and vaccine but more received the vaccine than the placebo. Also, that were a slightly larger percentage more infected that received a vaccine rather than the placebo. In addition, the same amount of LGBTQ were not infected that received the vaccine and the placebo. The second plot will show side-by-side bars where the height of each bar represents the percentage of observations for each combination of infected and treatment.There was a substantial amount of LGBTQ who received the vaccine than those who received the placebo and were infected. In addition, the same amount of LGBTQ were not infected that received the vaccine and the placebo.
 
 ### Numerical results
 
@@ -168,12 +168,10 @@ Whereas there was 50 who received the placebo and 50 who received the  were vacc
 ```{r}
 chisq.test(table1)
 chisqtestGC(table1)
-malesfish <- fisher.test(table1)
-malesfish
+LGBTQfish <- fisher.test(table1)
+LGBTQfish
 ```
-
-
-
+Based on the results, both Pearson's Chi-squared test and Fisher's Exact Test indicate a significant association between the infected and treatment variables. The odds ratio indicates that the odds of being infected with covid19 are higher for individuals receiving the vaccine treatment compared to the placebo treatment, and this difference is statistically significant.The vaccine is evidently completely ineffective in protecting the LGBTQ community against covid-19 and taking it is not advised. 
 
 
 ## Druggies
