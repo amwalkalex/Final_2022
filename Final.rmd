@@ -233,4 +233,22 @@ Druggiesfish
 According to the results, both the Chi-squared test and Fisher's Exact Test show strong evidence of a significant association between the treatment type and infection rates. The p-values from both tests are very close to 0, indicating that the differences in infection rates are highly unlikely to have occurred by chance. The odds ratio from Fisher's Exact Test suggests that the odds of infection are significantly lower for the vaccine treatment compared to the placebo treatment.
 
 
+
+```{r}
+effect <- drugfish$p.value/(drugfish$p.value +1)
+effectivenessdrug = drugfish$estimate/(drugfish$estimate +1)*100
+print(effectivenessdrug)
+```
+
+```{r}
+low=(drugfish$conf.int[1]/(drugfish$conf.int[1] +1))*100
+hi=(drugfish$conf.int[2]/(drugfish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+## Effectiveness Confidence 
+
+Above is the effectiveness for the covid-19 vaccine for LGBTQ Based on the interval seen above,the odds ratio for the Druggies are 11. The odds ratio is approximately how effective the vaccine is. We can conclude that the vaccine is not effective in protecting LGBTQ from getting covid-19. 
+
+
 # Overall Results and Conclusions
