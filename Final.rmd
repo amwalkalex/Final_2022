@@ -173,6 +173,7 @@ LGBTQfish
 ```
 Based on the results, both Pearson's Chi-squared test and Fisher's Exact Test indicate a significant association between the infected and treatment variables. The odds ratio indicates that the odds of being infected with covid19 are higher for individuals receiving the vaccine treatment compared to the placebo treatment, and this difference is statistically significant.The vaccine is evidently completely ineffective in protecting the LGBTQ community against covid-19 and taking it is not advised. 
 
+## Effectiveness 
 
 ```{r}
 effect <- LGBTQfish$p.value/(LGBTQfish$p.value +1)
@@ -186,6 +187,7 @@ hi=(LGBTQfish$conf.int[2]/(LGBTQfish$conf.int[2] +1))*100
 options(digits=2)
 ```
 
+Above is the effectiveness for the covid-19 vaccine for LGBTQ Based on the interval seen above,the odds ratio for the  LGBTQ are 15. The odds ratio is approximately how effective the vaccine is. We can conclude that the vaccine is not effective in protecting LGBTQ from getting covid-19. 
 
 ## Druggies
 
