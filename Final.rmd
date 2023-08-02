@@ -155,7 +155,7 @@ There are two different plots based on LGBTQ and their results of getting infect
 ### Numerical results
 
 ```{r}
-table1 <- xtabs(~infected + treatment, data=males)
+table1 <- xtabs(~infected + treatment, data=LGBTQ)
 rowPerc(table1)
 colPerc(table1)
 ```
