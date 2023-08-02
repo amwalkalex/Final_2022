@@ -152,6 +152,14 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 There are two different plots based on LGBTQ and their results of getting infected or not based on them taking the placebo or vaccine. The first plot will show side-by-side bars where the height of each bar represents the count of observations for each combination of infected and treatment. So it seems as though, there were very few LGBTQ that received the placebo and vaccine but more received the vaccine than the placebo. Also, that were a slightly larger percentage more infected that received a vaccine rather than the placebo. In addition, the same amount of LGBTQ were not infected that received the vaccine and the placebo. The second plot will show side-by-side bars where the height of each bar represents the percentage of observations for each combination of infected and treatment.There ws a substantial amount of LGBTQ who received the vaccine than those who received the placebo and were infected. In addition, the same amount of LGBTQ were not infected that received the vaccine and the placebo.
 
+### Numerical results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=males)
+rowPerc(table1)
+colPerc(table1)
+```
+
 ## Druggies
 
 # Overall Results and Conclusions
