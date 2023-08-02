@@ -159,6 +159,8 @@ table1 <- xtabs(~infected + treatment, data=males)
 rowPerc(table1)
 colPerc(table1)
 ```
+For the LGBTQ people infected, there were 70 who received the placebo and 30 were received the vaccine.
+Whereas there was 50 who received the placebo and 50 who received the  were vaccine who were not infected.
 
 ## Druggies
 
